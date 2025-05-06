@@ -187,7 +187,11 @@ export default function LoginPage() {
           <Link href="/forgot-password" className="text-sm text-green-600 hover:text-green-500">
             Forgot your password?
           </Link>
+
         </div>
+        <Link href="/admin" className="text-gray-700 hover:text-green-600">
+                Admin Portal
+              </Link>
         
         <Button
           type="submit"

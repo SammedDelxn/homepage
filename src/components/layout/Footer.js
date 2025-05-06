@@ -8,7 +8,7 @@ const Footer = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">Green Gardens</h3>
+            <h3 className="text-lg font-bold mb-4">  Rochin Landscaping</h3>
             <p className="text-gray-600 mb-4">
               Professional landscaping and lawn care services for residential and commercial properties.
             </p>
@@ -79,7 +79,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 mt-8 pt-6 flex flex-col md:flex-row justify-between">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Green Gardens. All rights reserved.
+            &copy; {new Date().getFullYear()}    Rochin Landscaping  All rights reserved.
           </p>
           
           <div className="flex space-x-6 mt-4 md:mt-0">

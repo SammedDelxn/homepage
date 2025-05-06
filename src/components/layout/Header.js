@@ -1,17 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
-import Container from '../ui/Container';
+import Container from '../ui/Container'
 import Button from '../ui/Button';
 
 const Header = () => {
   return (
-    <header className="py-4 border-b border-gray-100 bg-white">
-      <Container>
+    <header className="p-6 border-b border-gray-100 w-full ">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-green-600">
-              Green Gardens
+          <div>
+          <Link href="/" className="text-2xl font-bold text-green-600">
+              
+              Rochin Landscaping
+
             </Link>
+          </div>
+          <div className="flex items-center">
+           
             
             <nav className="hidden md:flex ml-10 space-x-8">
               <Link href="/" className="text-gray-700 hover:text-green-600">
@@ -19,32 +23,31 @@ const Header = () => {
               </Link>
               <Link href="/about" className="text-gray-700 hover:text-green-600">
                 About
-              </Link>
-              <Link href="/services" className="text-gray-700 hover:text-green-600">
-                Services
-              </Link>
-              <Link href="/equipment" className="text-gray-700 hover:text-green-600">
-                Equipment
-              </Link>
-              <Link href="/portfolio" className="text-gray-700 hover:text-green-600">
+              </Link><Link href="/portfolio" className="text-gray-700 hover:text-green-600">
                 Portfolio
               </Link>
-              <Link href="/booking" className="text-gray-700 hover:text-green-600">
-                Book Service
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-green-600">
+              
+              
+              { /*<Link href="/equipment" className="text-gray-700 hover:text-green-600">
+                Equipment
+              </Link>}
+              
+              
+              {/* <Link href="/admin" className="text-gray-700 hover:text-green-600">
+                Admin Portal
+              </Link> */}
+              {/* <Link href="/blog" className="text-gray-700 hover:text-green-600">
                 Blog
-              </Link>
+              </Link> */}
               <Link href="/contact" className="text-gray-700 hover:text-green-600">
                 Contact
               </Link>
+              
             </nav>
           </div>
           
           <div className="flex items-center space-x-4">
-            <Link href="/booking" className="hidden sm:block">
-              <Button size="sm">Book Now</Button>
-            </Link>
+           
 
             {/* Login Button */}
             <Link href="/login" className="hidden sm:block">
@@ -61,7 +64,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </Container>
     </header>
   );
 };
