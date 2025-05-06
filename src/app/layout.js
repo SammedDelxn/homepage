@@ -9,8 +9,11 @@ import Footer from '../components/layout/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Green Gardens Landscaping",
-  description: "Professional landscaping and lawn care services",
+  title: {
+    default: 'GreenScapes - Professional Landscaping Services',
+    template: '%s | GreenScapes'
+  },
+  description: 'Transform your outdoor space with our professional landscaping services. Expert solutions tailored to your unique needs.',
 };
 
 export default function RootLayout({ children }) {
@@ -18,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <DashboardProvider>
-          <div className="flex flex-col min-h-screen w-full ">
+          <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
               {children}

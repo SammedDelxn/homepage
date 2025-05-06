@@ -1,46 +1,39 @@
 import React from 'react';
 import Link from 'next/link';
-import Container from '../ui/Container';
-import Button from '../ui/Button';
 
 const Hero = () => {
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-b from-white to-green-50">
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Transform Your Outdoor Space
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Professional landscaping and lawn care services customized to your needs. 
-              From regular maintenance to complete redesigns, we'll keep your yard 
-              looking its best all year round.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/booking">
-                <Button size="lg">Book Now</Button>
-              </Link>
-              <Link href="/booking">
-                <Button variant="outline" size="lg">Request Estimate</Button>
-              </Link>
-            </div>
-          </div>
-          
-          <div className="relative">
-            <div className="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden">
-              {/* In a real app, this would be an actual image */}
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                <span>Landscaping Hero Image</span>
-              </div>
-            </div>
+    <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center bg-cover bg-center" 
+      style={{ 
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1557429287-b2e26467fc2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" 
+      }}>
+      <div className="container mx-auto px-4 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Transform Your Outdoor Space
+          </h1>
+          <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+            Professional landscaping services to create the outdoor environment of your dreams. Expert solutions tailored to your unique needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-green-600 hover:bg-green-700 text-white text-lg font-medium py-3 px-8 rounded-md transition duration-300 inline-block"
+            >
+              Get a Free Estimate
+            </Link>
+            <Link 
+              href="/services" 
+              className="bg-transparent hover:bg-white/10 text-white text-lg font-medium py-3 px-8 border border-white rounded-md transition duration-300 inline-block"
+            >
+              Our Services
+            </Link>
           </div>
         </div>
-      </Container>
-      
-      {/* Decorative background shapes */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-green-100 rounded-full opacity-50 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-green-200 rounded-full opacity-40 blur-3xl"></div>
+      </div>
+
+      {/* Optional decorative elements */}
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/20 to-transparent"></div>
     </section>
   );
 };
